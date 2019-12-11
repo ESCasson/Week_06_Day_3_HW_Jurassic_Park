@@ -102,4 +102,15 @@ function(){
 
 });
 
+it('should be able to remove dinosaurs of a certain species', function(){
+  park.addDinosaur(dino)
+  park.addDinosaur(dino2)
+  park.addDinosaur(dino3)
+  park.addDinosaur(dino4)
+
+  const actual = park.deleteBySpecies('T-Rex')
+
+  assert.deepStrictEqual(park.dinosaurs,[dino2, dino3])
+})
+
 });

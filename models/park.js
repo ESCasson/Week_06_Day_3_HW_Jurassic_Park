@@ -55,4 +55,15 @@ Park.prototype.revenuePerYear = function () {
 };
 
 
+Park.prototype.deleteBySpecies = function (deleteSpecies) {
+  let newArray = []
+for (let dinosaur of this.dinosaurs){
+  if (dinosaur.species !== deleteSpecies){
+    newArray.push(dinosaur)
+  }
+}
+  this.dinosaurs = newArray
+};
+
+
 module.exports = Park
